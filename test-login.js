@@ -8,8 +8,12 @@ const setupBrowser = require('./puppeteer-setup');
     await page.goto('http://example.com/login', { waitUntil: 'networkidle0' });
 
     // Fill login form
-    await page.type('#username', 'validUsername');
-    await page.type('#password', 'validPassword');
+    await page.type('#username', 'DakTest');
+	
+    // Click next
+    await page.click('#submit');
+	
+    await page.type('#password', 'Test!ng001');
 
     // Click login
     await page.click('#login-button');
